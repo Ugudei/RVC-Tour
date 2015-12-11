@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyMovies" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBQ-nv-tDL">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="0.0"/>
+                                <items>
+                                    <navigationItem title="My Movies" id="HEc-bX-SqX"/>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phu-bG-b2y">
+                                <rect key="frame" x="0.0" y="0.0" width="720" height="400"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F7O-Ml-jxC">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="400"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcX-J4-eel">
+                                                <rect key="frame" x="-3" y="85" width="246" height="151"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="151" id="vFX-wX-X6d"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="trailer1.png"/>
+                                                <connections>
+                                                    <segue destination="p4f-aV-jp7" kind="show" id="W72-Qe-gIC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="CcX-J4-eel" firstAttribute="leading" secondItem="F7O-Ml-jxC" secondAttribute="leading" constant="-3" id="P8b-HS-KQ2"/>
+                                            <constraint firstItem="CcX-J4-eel" firstAttribute="centerX" secondItem="F7O-Ml-jxC" secondAttribute="centerX" id="xfa-CI-Ti0"/>
+                                            <constraint firstItem="CcX-J4-eel" firstAttribute="top" secondItem="F7O-Ml-jxC" secondAttribute="top" constant="85" id="xsh-gQ-jCf"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Omk-WW-i5l">
+                                        <rect key="frame" x="240" y="0.0" width="240" height="400"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ns8-mM-H8h">
+                                                <rect key="frame" x="16" y="16" width="209" height="368"/>
+                                                <state key="normal" title="Button" image="trailer2.png"/>
+                                                <connections>
+                                                    <segue destination="p4f-aV-jp7" kind="show" id="JM6-Aa-LYN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Ns8-mM-H8h" firstAttribute="leading" secondItem="Omk-WW-i5l" secondAttribute="leading" constant="16" id="Axs-dJ-5JL"/>
+                                            <constraint firstItem="Ns8-mM-H8h" firstAttribute="centerY" secondItem="Omk-WW-i5l" secondAttribute="centerY" id="htX-FF-QL4"/>
+                                            <constraint firstItem="Ns8-mM-H8h" firstAttribute="top" secondItem="Omk-WW-i5l" secondAttribute="top" constant="16" id="iwi-jk-93M"/>
+                                            <constraint firstItem="Ns8-mM-H8h" firstAttribute="centerX" secondItem="Omk-WW-i5l" secondAttribute="centerX" id="lUM-ea-8fp"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0mX-gJ-FMs">
+                                        <rect key="frame" x="480" y="0.0" width="240" height="400"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iov-vS-Ohz">
+                                                <rect key="frame" x="-7" y="14" width="255" height="372"/>
+                                                <state key="normal" title="Button" image="trailer3.png"/>
+                                                <connections>
+                                                    <segue destination="p4f-aV-jp7" kind="show" identifier="third" id="egg-74-BdV"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Iov-vS-Ohz" firstAttribute="centerX" secondItem="0mX-gJ-FMs" secondAttribute="centerX" id="Big-Oc-eb1"/>
+                                            <constraint firstItem="Iov-vS-Ohz" firstAttribute="leading" secondItem="0mX-gJ-FMs" secondAttribute="leading" constant="-7" id="Jpe-Qv-FeA"/>
+                                            <constraint firstItem="Iov-vS-Ohz" firstAttribute="centerY" secondItem="0mX-gJ-FMs" secondAttribute="centerY" id="TE3-4p-ruY"/>
+                                            <constraint firstItem="Iov-vS-Ohz" firstAttribute="top" secondItem="0mX-gJ-FMs" secondAttribute="top" constant="14" id="ocQ-rs-96C"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Omk-WW-i5l" firstAttribute="centerX" secondItem="phu-bG-b2y" secondAttribute="centerX" id="gDu-rm-pOm"/>
+                                    <constraint firstItem="Omk-WW-i5l" firstAttribute="leading" secondItem="phu-bG-b2y" secondAttribute="leading" constant="240" id="mUQ-qe-J9i"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="phu-bG-b2y" secondAttribute="bottom" constant="14" id="Khh-ny-37v"/>
+                            <constraint firstItem="phu-bG-b2y" firstAttribute="leading" secondItem="hBQ-nv-tDL" secondAttribute="leading" id="Qhc-Jc-zEk"/>
+                            <constraint firstItem="hBQ-nv-tDL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gBA-ba-LkC"/>
+                            <constraint firstItem="phu-bG-b2y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gep-pw-kFR"/>
+                            <constraint firstAttribute="trailing" secondItem="hBQ-nv-tDL" secondAttribute="trailing" id="nLj-gk-8Lp"/>
+                            <constraint firstItem="phu-bG-b2y" firstAttribute="top" secondItem="hBQ-nv-tDL" secondAttribute="bottom" id="qF9-tW-aju"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="phu-bG-b2y" secondAttribute="trailing" constant="-4" id="srY-dK-evO"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="455" y="337"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="uep-Gq-xtS">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="p4f-aV-jp7" sceneMemberID="viewController">
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </avPlayerViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AZX-gS-yb8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="832"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="trailer1.png" width="2448" height="3264"/>
+        <image name="trailer2.png" width="3264" height="2448"/>
+        <image name="trailer3.png" width="3264" height="2448"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="egg-74-BdV"/>
+    </inferredMetricsTieBreakers>
+</document>
